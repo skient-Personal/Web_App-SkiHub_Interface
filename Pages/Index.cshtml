@@ -1,10 +1,23 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "SkiHub";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!--Scripts Used In Page-->
+<script type="text/javascript">
+    function GetTouch() {
+        if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0))
+            window.location.href='/SkiHub/Interface';
+        else
+            window.location.href='/SkiHub/Display';
+    }    
+</script>
+
+<div class="status">
+    <p>Checking Display Type...Please Wait.</p>
 </div>
+<script>GetTouch();</script>
+
+
+
